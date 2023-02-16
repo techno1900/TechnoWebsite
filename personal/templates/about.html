@@ -1,0 +1,29 @@
+{% extends 'main.html'%}
+
+
+{% block content %}
+
+
+<main>
+	<section class="section">
+		<div class="container">
+            {% for i in personal %}
+			<div class="row">
+				
+				<div class="col-lg-8 mx-auto mb-5 mb-lg-0">
+					<img loading="lazy" decoding="async" src="{{i.profile_image.url}}" class="img-fluid w-70 mb-4" alt="Author Image">
+					<h1 class="mb-4">{{i.name}}</h1>
+					<div class="content">
+						<p>{{i.bio}}</p>
+						</div>
+                    <p> email : {{i.email}} </P>
+                    <p> contact : {{i.contact}} </P>
+				</div>
+
+        <div class="col-lg-4">
+        {% endfor %}
+
+</div>		
+</main>
+
+{% endblock content %}
